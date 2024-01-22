@@ -11,7 +11,7 @@ body{
 
 nav {
     width: 100%;
-    position: fixed;
+    position: absolute;
     padding: 1rem;
     top: 0;
     color: rgb(255, 255, 255);
@@ -43,17 +43,21 @@ nav {
     align-items: center;
 }
 
-.nav-item>ul.nav-link {
+/* .nav-item>ul.nav-link {
     margin-left: 2rem;
-}
+} */
 
 .nav-item ul {
     display: flex;
 }
 
 .nav-link li {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 
+}
+
+.nav-options li{
+    font-size: 1vw;
 }
 
 .nav-item li {
@@ -104,14 +108,14 @@ nav {
     margin-top: 2.1rem;
 }
 
-.btn button, .prod-description button{
+button{
     padding: 0.7rem 1rem;
     outline: none;
     border: none;
     text-transform: uppercase;
 }
 
-.btn button:hover, .prod-description button:hover{
+button:hover{
     cursor: pointer;
     transform: scale(1.1);
     transition: transform ease-in-out 500ms;
@@ -121,10 +125,6 @@ nav {
     background-color: #ffffff;
     color: black;
     transition: transform ease-in-out 500ms;
-}
-
-.btn .shop:hover{
-
 }
 
 .btn .find-more{
@@ -188,14 +188,192 @@ nav {
 .card .prod-description p:nth-child(1){
     font-size: 1.8em;
     font-family: Arial, Helvetica, sans-serif;
-    /* line-height: 4rem; */
 }
 
-card .prod-description p:nth-child(2){
+.card .prod-description p:nth-child(2){
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
-    /* line-height: 2.5rem; */
 }
+
+.feature-products{
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.027);
+
+}
+
+.feature-products h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30ch, 1fr));
+    column-gap: 10px;
+    row-gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* background-color: rgba(0, 0, 0, 0.507); */
+
+}
+
+.card-wrapper .card{
+    align-self: center;
+    justify-self: center;
+    line-height: 1.8rem;
+}
+
+.card-wrapper .card img{
+    display: block;
+    justify-content: center;
+    max-width: 100%;
+    height: max(10rem, 30vh);
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    margin: 0 auto;
+}
+
+.card h3{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.card-wrapper .card .category{
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.card-wrapper .card .price{
+    font-size: 1rem;
+}
+
+.banner{
+    width: 100%;
+    padding: 0;
+    margin-top: 2rem;
+    position: relative;
+    height: 500px;
+    object-fit: cover;
+}
+
+.banner-content img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+
+.banner-caption{
+    position: absolute;
+    width: 50%;
+    top: 8rem;
+    left: 4rem;
+    /* border: 1px solid white; */
+    color: #ffffff;
+    line-height: 4rem;
+}
+
+.banner-caption .head{
+    font-size: 4.2rem;
+    font-weight: bold;
+}
+
+.banner-caption .details{
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+
+.banner .discount-text{
+    font-family: "Times New Roman", Times, serif;
+}
+
+.banner-caption .shop{
+    background-color: #ffffff;
+    color: black;
+    transition: transform ease-in-out 500ms;
+}
+
+.features-content{
+    display: flex;
+    width: 100%;
+    margin-top: 7rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.068);
+    border-bottom: 1px solid black;
+}
+
+.features-content .feature-card{
+    display: block;
+    align-items: center;
+    width: 20%;
+    margin: 1rem 2rem;
+}
+
+.features-content .feature-card img{
+    max-width: 100%;
+    
+}
+
+.feature-text p:nth-child(1){
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.feature-text p:nth-child(2){
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.sell-details{
+    padding: 1rem;
+    margin: 0rem 0;
+}
+
+.sell-details h5{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.bottom-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.brand-name h2{
+    text-align: centers;
+}
+
+.women-section{
+    margin: 1rem;
+}
+
+.women-section p{
+    font-size: 1.5rem;
+}
+
+.women-section ul li{
+    font-weight: lighter;
+    list-style: none;
+}
+
+
+
 
 
 @media(max-width: 1300px) {
@@ -210,4 +388,19 @@ card .prod-description p:nth-child(2){
         flex-direction: column;
     }
 
+    .bottom-info{
+        flex-direction: column;
+    }
+
+  
+}
+
+@media(max-width: 640px){
+    .features-content{
+        flex-direction: column;
+    }
+
+    .bottom-info{
+        flex-direction: column;
+    }
 }
